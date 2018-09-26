@@ -6,11 +6,23 @@ const numCols = 2
 
 class SquaresInterface extends Component {
 
+    state = {
+        cardColor: 'grey'
+    }
+
+    cardClicked(item) {
+        alert(item.id)
+    }
+
     renderList = ({ item }) => {
         return (
             <View>
                 <Card>
-                    <TouchableHighlight onPress={() => alert("Cliccato: "+item.id)}>
+                    <TouchableHighlight
+                        style={{ width: '100%', height: '100%' }}
+                        onPress={() => this.cardClicked(item)}
+                        underlayColor='lightgrey'
+                    >
                         <View>
                             <View style={styles.innerViewStyle}>
                                 <Image style={styles.image} source={item.avatar} />

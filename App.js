@@ -7,7 +7,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <Header headerText="GridList" />
+        <Header headerText="SharksList" />
         <SquaresInterface />
       </View>
     );
